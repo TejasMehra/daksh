@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Submit Grievance</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Submit Your Grievance</h1>
+      <form id="grievanceForm">
+        <input
+          type="text"
+          id="title"
+          placeholder="Name this tantrum"
+          required
+        />
+        <textarea
+          id="complaint"
+          placeholder="Don’t hold back. I’ll pretend I’m not offended."
+          required
+        ></textarea>
+        <select id="mood">
+          <option>😑</option>
+          <option>🙄</option>
+          <option>🥹</option>
+          <option>😤</option>
+          <option>😒</option>
+          <option>😶</option>
+          <option>🤧</option>
+          <option>😡</option>
+          <option>😵‍💫</option>
+        </select>
+        <select id="severity">
+          <option>A hug</option>
+          <option>A date</option>
+          <option>A sunflower</option>
+          <option>A packet of doodh</option>
+          <option>Aloo</option>
+          <option>A FaceTime call where I make amazing jokes</option>
+          <option>Chocopie</option>
+          <option>A shirtless photo (abs still buffering…)</option>
+        </select>
+        <button type="submit">Submit 💌</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("grievanceForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          const title = document.getElementById("title").value;
+          const complaint = document.getElementById("complaint").value;
+          const mood = document.getElementById("mood").value;
+          const severity = document.getElementById("severity").value;
+
+          // Save data to localStorage
+          const grievance = {
+            title: title,
+            complaint: complaint,
+            mood: mood,
+            severity: severity,
+            timestamp: new Date().toISOString(),
+          };
+
+          localStorage.setItem("currentGrievance", JSON.stringify(grievance));
+
+          // Redirect to thank you page
+          window.location.href = "thankyou.html";
+        });
+    </script>
+  </body>
+</html>

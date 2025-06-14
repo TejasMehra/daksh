@@ -1,0 +1,142 @@
+body {
+  background-color: #fff9c4; /* Soft pastel yellow */
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Fun font */
+  cursor: url("path/to/custom-cursor.png"), auto; /* Custom cursor */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  background-image: url("path/to/background-image.jpg"); /* Optional: add a background image */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Max width for larger screens */
+  overflow: hidden; /* Prevent overflow */
+  position: relative; /* Position relative for absolute positioning of children */
+}
+
+h1 {
+  color: #ff4081; /* Pastel pink */
+  font-size: 2.5em; /* Larger heading */
+  margin-bottom: 20px; /* Space below heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for emphasis */
+}
+
+p {
+  color: #333;
+  margin-bottom: 20px; /* Space below paragraph */
+  font-size: 1.2em; /* Larger paragraph text */
+}
+
+.login-button {
+  background-color: #ff4081; /* Pastel pink */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+  font-size: 1em; /* Consistent font size */
+  display: inline-block; /* Ensure button is inline-block for proper alignment */
+}
+
+.login-button:hover {
+  background-color: #e91e63; /* Darker pink on hover */
+}
+
+body {
+  background-color: #fff9c4; /* Soft pastel yellow */
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Fun font */
+  cursor: url("path/to/custom-cursor.png"), auto; /* Custom cursor */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: white; /* Optional: add a background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Max width for larger screens */
+  overflow: hidden; /* Prevent overflow */
+}
+
+h1 {
+  color: #ff4081; /* Pastel pink */
+  font-size: 2em; /* Larger heading */
+}
+
+p {
+  color: #333;
+  margin-bottom: 20px; /* Space below paragraph */
+}
+
+form {
+  display: flex; /* Use flexbox for form layout */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 15px; /* Space between elements */
+}
+
+input,
+textarea,
+select {
+  padding: 10px; /* Padding for input fields */
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 5px; /* Rounded corners */
+  width: 100%; /* Full width */
+  font-size: 1.5em; /* Consistent font size */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+button {
+  background-color: #ff4081; /* Pastel pink */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+  font-size: 1em; /* Consistent font size */
+}
+
+button:hover {
+  background-color: #e91e63; /* Darker pink on hover */
+}
+
+.submit-another {
+  background-color: #767676; /* Pastel pink */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+  font-size: 1em; /* Consistent font size */
+  margin-top: 20px; /* Add margin to create space */
+  display: inline-block; /* Ensure it behaves like a block element */
+}
+
+.submit-another:hover {
+  background-color: #767676; /* Darker pink on hover */
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Grievance Received</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Grievance received, Shellu 💅</h1>
+      <p>
+        You can now share the PDF with me. Daksh will now sit quietly and
+        reflect on how he messed up (or not). Expect a response, possibly
+        dramatic, possibly cute.
+      </p>
+      <button id="downloadPdf">Download PDF</button>
+      <a href="submission.html" class="submit-another">Submit Another</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      document
+        .getElementById("downloadPdf")
+        .addEventListener("click", function () {
+          const grievance = JSON.parse(
+            localStorage.getItem("currentGrievance")
+          );
+
+          if (grievance) {
+            // Create a new jsPDF instance
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Add content to the PDF
+            doc.setFontSize(16);
+            doc.text("Grievance Submission", 20, 20);
+            doc.setFontSize(12);
+            doc.text(`Title: ${grievance.title}`, 20, 40);
+            doc.text(`Complaint: ${grievance.complaint}`, 20, 60);
+            doc.text(`Mood: ${grievance.mood}`, 20, 80);
+            doc.text(`Severity: ${grievance.severity}`, 20, 100);
+
+            // Save the PDF
+            doc.save("grievance.pdf");
+          } else {
+            alert("No grievance data found.");
+          }
+        });
+    </script>
+  </body>
+</html>
